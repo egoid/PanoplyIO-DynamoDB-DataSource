@@ -1,18 +1,15 @@
 from distutils.core import setup
 
 setup(
-    name="panoply_googledrive",
+    name="panoply_dynamodb",
     version="1.0.0",
-    description="Panoply Data Source for Google Drive",
-    author="Ofir Herzas",
-    author_email="ofirh@panoply.io",
+    description="Panoply Data Source for DynamoDB",
+    author="Adam T",
+    author_email="adam.anh.ta@gmail.com",
     url="http://panoply.io",
     install_requires=[
         "panoply-python-sdk==1.3.4",
-        "google-api-python-client==1.6.2",
-        "mock==2.0.0",
-        "httplib2==0.10.3",
-        "oauth2client==4.1.1"
+        "boto3==1.4.91",
     ],
     extras_require={
         "test": [
@@ -24,5 +21,5 @@ setup(
 
     # place this package within the panoply package namespace
     package_dir={"panoply": ""},
-    packages=["panoply.googledrive"]
+    packages=["panoply.dynamodb"]
 )
